@@ -39,7 +39,6 @@ def get_appointment_guidelines() -> str:
         "doctor ID, appointment date, appointment time, and reason for the visit."
     )
 
-app = mcp.http_app()
-
+app = mcp.http_app(stateless_http=True)
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
